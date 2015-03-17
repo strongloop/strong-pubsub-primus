@@ -1,0 +1,19 @@
+{
+  "name": "strong-pubsub-primus",
+  "version": "0.0.1",
+  "description": "Primus compatibility layer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/strongloop/strong-pubsub-primus.git"
+  },
+  "author": "Simon Ho <simon@strongloop.com> (http://github.com/superkhau)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/strongloop/strong-pubsub-primus/issues"
+  },
+  "homepage": "https://github.com/strongloop/strong-pubsub-primus"
+}
