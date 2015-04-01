@@ -31,15 +31,12 @@ function createConnection(port, host, options) {
   });
   primus.on('data', function(chunk) {
     debug('primus data event');
-    // chunk is an arrayBuffer
-    if (chunk && !Buffer.isBuffer(chunk)) {
+    if (chunk && !Buffer.isBuffer(chunk))
       chunk = toBuffer(chunk);
-    }
     connection._data(chunk);
   });
   connection.on('_data', function(chunk) {
     debug('connection _data event');
-    // someone called connection.write(buf)
     primus.write(chunk);
   });
   connection.on('_end', function() {
@@ -54,8 +51,7 @@ function createConnection(port, host, options) {
 function toBuffer(ab) {
   var buffer = new Buffer(ab.byteLength);
   var view = new Uint8Array(ab);
-  for(var i = 0; i < buffer.length; ++i) {
+  for (var i = 0; i < buffer.length; ++i)
     buffer[i] = view[i];
-  }
   return buffer;
 }
