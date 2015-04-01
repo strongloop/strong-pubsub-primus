@@ -1,34 +1,33 @@
-var PrimusTransport = require('../');
+var helper = require('strong-pubsub-test');
+var http = require('http');
+var Primus = require('primus');
+var PrimusTransport = require(ROOT);
 var Client = require('strong-pubsub');
 var Adapter = require('strong-pubsub-mqtt');
 var Connection = require('strong-pubsub-connection-mqtt');
-var helper = require('strong-pubsub-test');
-var Primus = require('primus');
 
-describe('primus transport end to end behavior', function () {
+describe('transport', function() {
   beforeEach(function setUpServer(done) {
     var test = this;
     helper.getFreePort(function(port) {
       test.port = port;
-      var httpServer = require('http').createServer();
-      httpServer.listen(port, done);
-      var options = {
+      var httpServer = http.createServer();
+      test.primus = new Primus(httpServer, {
         transformer: 'engine.io',
         parser: 'binary'
-      };
-      var primus = test.primus = new Primus(httpServer, options);
+      });
+      httpServer.listen(port, done);
     });
   });
 
   beforeEach(function setUpClient(done) {
     var test = this;
+    var topic = test.topic = 'my topic';
+    var message = test.message = 'my message';
     var client = new Client({
       host: 'localhost',
       port: this.port
     }, Adapter, PrimusTransport);
-    var message = test.message = 'my message';
-    var topic = test.topic = 'my topic';
-
     client.publish(topic, new Buffer(message));
     this.primus.on('connection', function(conn) {
       var mqttConn = new Connection(conn);

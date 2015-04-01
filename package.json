@@ -11,7 +11,10 @@
     "url": "https://github.com/strongloop/strong-pubsub-primus.git"
   },
   "author": "Simon Ho <simon@strongloop.com> (http://github.com/superkhau)",
-  "license": "ISC",
+  "license": {
+    "name": "Dual MIT/Strongloop",
+    "url": "http://github.com/strongloop/strong-pubsub-primus/blob/master/LICENSE"
+  },
   "bugs": {
     "url": "https://github.com/strongloop/strong-pubsub-primus/issues"
   },
@@ -27,10 +30,10 @@
     "engine.io": "^1.5.1",
     "engine.io-client": "^1.5.1",
     "mocha": "^2.2.1",
-    "strong-pubsub": "git+ssh://git@github.com:strongloop/strong-pubsub.git",
-    "strong-pubsub-connection-mqtt": "git+ssh://git@github.com:strongloop/strong-pubsub-connection-mqtt.git",
-    "strong-pubsub-mqtt": "git+ssh://git@github.com:strongloop/strong-pubsub-mqtt.git",
-    "strong-pubsub-proxy": "git+ssh://git@github.com:strongloop/strong-pubsub-proxy.git",
-    "strong-pubsub-test": "git+ssh://git@github.com:strongloop/strong-pubsub-test.git"
+    "strong-pubsub": "^0.1.0",
+    "strong-pubsub-connection-mqtt": "^0.1.0",
+    "strong-pubsub-mqtt": "^0.1.0",
+    "strong-pubsub-proxy": "^0.1.0",
+    "strong-pubsub-test": "^0.1.0"
   }
 }
