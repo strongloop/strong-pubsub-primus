@@ -1,6 +1,6 @@
 # strong-pubsub-primus
 
-Primus compatibility layer for [`strong-pubsub`][strong-pubsub-repo].
+[Primus](https://www.npmjs.com/package/primus) compatibility layer for [`strong-pubsub`][strong-pubsub-repo].
 
 # Installation
 
