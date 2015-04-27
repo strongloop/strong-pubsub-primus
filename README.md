@@ -2,13 +2,13 @@
 
 [Primus](https://www.npmjs.com/package/primus) compatibility layer for [`strong-pubsub`][strong-pubsub-repo].
 
-# Installation
+## Installation
 
 ```
 npm install --save strong-pubsub-primus
 ```
 
-# Usage
+## Use
 
 Create a client as you would normally do using [`strong-pubsub`][strong-pubsub-repo] and pass in the Primus transport as the third argument:
 
@@ -23,6 +23,6 @@ var client = new Client({
 }, Adapter, PrimusTranport); // pass it in as the third argument
 ```
 
->You will need a preconfigured Primus server to act as the broker.
+**NOTE**: You will need a preconfigured Primus server to act as the broker.
 
 [strong-pubsub-repo]: https://github.com/strongloop/strong-pubsub
