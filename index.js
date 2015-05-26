@@ -2,7 +2,7 @@ exports.createConnection = createConnection;
 
 var duplex = require('duplex');
 var debug = require('debug')('strong-pubsub-primus');
-var Primus = require('Primus');
+var Primus = require('primus');
 var util = require('util');
 
 function createConnection(port, host, options) {
