@@ -11,10 +11,7 @@
     "url": "https://github.com/strongloop/strong-pubsub-primus.git"
   },
   "author": "Simon Ho <simon@strongloop.com> (http://github.com/superkhau)",
-  "license": {
-    "name": "Dual MIT/Strongloop",
-    "url": "http://github.com/strongloop/strong-pubsub-primus/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/strongloop/strong-pubsub-primus/issues"
   },
